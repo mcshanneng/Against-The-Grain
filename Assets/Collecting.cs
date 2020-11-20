@@ -78,27 +78,16 @@ public class Collecting : MonoBehaviour
         if (other.gameObject.CompareTag("DogBiscuit"))
         {
 
-            //Instantiate(other.gameObject, new Vector3(Random.Range(-30, 30), 20, Random.Range(-30, 30)), Quaternion.identity);
             Destroy(other.gameObject);
             count++;
             SetCountText();
         }
         if (other.gameObject.CompareTag("Water"))
         {
-            //Destroy(gameObject);
             transform.position = new Vector3(0,3f, 0);
-        }
-    }
-}
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("DogBiscuit"))
-        {
-            other.gameObject.SetActive(false);
-            count++;
-
+            count = 0;
             SetCountText();
         }
     }
-    */
+}
+
